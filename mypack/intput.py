@@ -1,8 +1,8 @@
-import clear
+from mypack.clear import clear
 
 # = integer input checker
 
-# ¤ Makes an int from input by trying the input until it doesnt crash
+"""Makes an int from input by trying the input until it doesnt crash"""
 
 
 def intput(printable, value_error_text = "You didnt write a number."):
