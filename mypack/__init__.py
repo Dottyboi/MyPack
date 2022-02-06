@@ -33,9 +33,6 @@ def file_lister(file):
 
 # = integer input checker
 
-
-
-
 def intput(printable, value_error_text = "You didnt write a number."):
     """Makes an int from input by trying the input until it doesnt crash"""
     while True:
@@ -80,10 +77,14 @@ def json_classreader(classname, filename):
     with open(filename + ".json", "r") as read_file:
         data = json.load(read_file)
 
-    return [
-        classname(value for key, value in data.items())
-        for _ in range(len(data))
-    ]
+    try:    
+        return [
+            classname(value for _, value in data.items())
+            for _ in range(len(data))
+        ]
+    except TypeError:
+        print("Unable to initiate objects")
+        return []
 
 # = write to json file
 
