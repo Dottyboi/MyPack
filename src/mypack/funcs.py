@@ -83,3 +83,10 @@ def json_writer(data, filename):
     """writes dict to json"""
     with open(os.path.join(sys.path[0], f'{filename}.json'), "w") as write_file:
         json.dump(data.__dict__.items(), write_file)
+
+# = colored text from hex codes
+
+def hextext(text, hexcode):
+    """print in a hex defined color"""
+    hexint = int(''.join(filter('0123456789ABCDEF'.__contains__, hexcode.upper())), 16)
+    return "\x1B[38;2;{};{};{}m{}\x1B[0m".format(hexint>>16, hexint>>8&0xFF, hexint&0xFF, text)
