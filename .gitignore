@@ -5,3 +5,5 @@ src/mypack_Dotty.egg-info/dependency_links.txt
 src/mypack_Dotty.egg-info/PKG-INFO
 src/mypack_Dotty.egg-info/SOURCES.txt
 src/mypack_Dotty.egg-info/top_level.txt
+dist/mypack-Dotty-2.1.0.tar.gz
+dist/mypack_Dotty-2.1.0-py3-none-any.whl
